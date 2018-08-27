@@ -10,7 +10,11 @@ html {
     box-sizing: border-box;
     font-family: 'Modern Antiqua', cursive;
     background: var(--light);
-    color: var(--dark);
+    color: var(--light);
+    background-image: url('../images/dnd background.jpg');
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     /* overflow-x: hidden; */
 }
 
@@ -133,6 +137,7 @@ Header {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     text-align: center;
+    color: var(--dark);
 }
 
 .dice{
@@ -140,6 +145,7 @@ Header {
     background: lightgray;
     padding: 2rem 0rem;
     margin: 0.1rem;
+    font-size: 2rem;
 }
 
 @media(min-width: 1600px){
