@@ -18,10 +18,6 @@ html {
     /* overflow-x: hidden; */
 }
 
-body {
-    margin:30px 50px;
-}
-
 img{
     max-width: 100%;
 }
@@ -93,36 +89,14 @@ Header {
 #die-container {
     grid-column: 2/3;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 1vw;
-    grid-template-areas:
-        'd4 d4 d6 d6 d8 d8 d10 d10 d12 d12 d20 d20';
 }
 
 .die-header {
     text-align: center;
     padding-top: 0.9rem;
     font-size: 1.3rem;
-}
-
-#d4 {
-    grid-area: d4;
-}
-#d6 {
-    grid-area: d6;
-}
-#d8 {
-    grid-area: d8;
-}
-#d10 {
-    grid-area: d10;
-}
-#d12 {
-    grid-area: d12;
-}
-#d20 {
-    grid-area: d20;
 }
 
 #roll-button {
@@ -176,9 +150,14 @@ Header {
     #dice-output-container{
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    #die-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @media(max-width: 500px) {
+
     #dice-output-container{
         grid-template-columns: 1fr 1fr;
     }
