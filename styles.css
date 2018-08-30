@@ -7,6 +7,7 @@
 }
 
 html {
+    height: 100%;
     box-sizing: border-box;
     font-family: 'Modern Antiqua', cursive;
     background: var(--light);
@@ -37,6 +38,12 @@ Header {
     border: 2;
     font-family: Arial, Helvetica, sans-serif;
     font-size:1.2rem;
+    cursor: pointer;
+    /* disables selection */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .btn:hover {
@@ -101,7 +108,10 @@ Header {
 
 #roll-button {
     grid-column: 2/3;
-    width: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.1vw;
+    width: 65%;
     text-align: center;
     margin:auto;
 }
@@ -160,5 +170,11 @@ Header {
 
     #dice-output-container{
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 300px) {
+    #dice-output-container{
+        grid-template-columns: 1fr;
     }
 }
